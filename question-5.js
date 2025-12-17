@@ -19,3 +19,28 @@ const products = [
 
 const promotionCode = "";
 // เริ่มเขียนโค้ดตรงนี้
+function calculateTotalPrice(products,promotionCode){
+  
+  let totalPrice = 0
+
+  for (let i = 0; i< products.length; i++) {
+    console.log(products[i]);
+
+    let priceProduct = products.price * products.quantity;
+
+    totalProduct = totalPrice + priceProduct;
+}
+if(promotionCode === "SALE20"){
+  totalPrice = totalPrice - (totalPrice * 20 / 100);
+        return("ใช้ส่วนลด 20%");
+    } else if (promotionCode === "SALE50") {
+        totalPrice = totalPrice - (totalPrice * 50 / 100);
+        return("ใช้ส่วนลด 50%");
+    } else if (promotionCode === ""){
+        return("ไม่มีส่วนลด");
+    }
+
+    return totalPrice;
+}
+console.log (calculateTotalPrice(products,promotionCode));
+
